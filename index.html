@@ -124,7 +124,7 @@
 
         .SecondSection .box {
             background-color: white;
-            width: 77vw;
+            width: 60vw;
             height: 2px;
             margin: 56px 0;
             display: flex;
@@ -159,8 +159,23 @@
             color: rgb(227, 227, 227);
             width: 150px;
             font-size: 20px;
+        }
+        @media screen and (max-width: 2000px) {
+            Body{
+               /* background-color: red;*/
 
+            }
+            .box {
+                flex-direction: column;
+            }
+            .SecondSection .vertical {
+                height: unset;
 
+            }
+            
+            .firstSection {
+                flex-direction: column-reverse;
+            }
         }
     </style>
 
