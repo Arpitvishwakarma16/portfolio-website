@@ -149,18 +149,21 @@
         width: 200px;
         font-size: 20px;
       }
-      @media screen and (max-width: 2000px) {
+      @media screen and (max-width: 1500px) {
         body {
-          /*background-color: red;*/
+          background-color: red;
         }
         .firstSection {
             flex-direction: column-reverse;
         }
-        .box{
+        .box {
             flex-direction: column;
         }
         .SecondSection .vertical{
             height: unset;
+        }
+        .vertical-title, .vertical-desc {
+            left: 45px;
         }
       }
 
