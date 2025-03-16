@@ -116,7 +116,7 @@
 
       .SecondSection .box {
         background-color: white;
-        width: 60vw;
+        width: 77vw;
         height: 2px;
         margin: 56px 0;
         display: flex;
@@ -126,7 +126,7 @@
         height: 93px;
         width: 1px;
         background-color: white;
-        margin: 0 125px;
+        margin: 0 6vw;
       }
 
       .image-top {
@@ -149,9 +149,13 @@
         width: 200px;
         font-size: 20px;
       }
-      @media screen and (max-width: 1500px) {
+      @media screen and (max-width: 1400px) {
         body {
+            min-width: fit-content;
           /*background-color: red;*/
+        }
+        nav {
+            flex-direction: column;
         }
         .firstSection {
             flex-direction: column-reverse;
@@ -163,7 +167,36 @@
             height: unset;
         }
         .vertical-title, .vertical-desc {
-            left: 45px;
+            left: 40px;
+        }
+        .SecondSection .box {
+            width: 50vw;
+        }
+        .leftSection {
+            width: 100% !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .RightSection {
+            width: 721px !important;
+            display: flex;
+            justify-content: center;
+        }
+        .RightSection img {
+            width: 45vw;
+            margin-bottom: 73px;
+
+        }
+        .SecondSection {
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-top {
+            top: 100px;
         }
       }
 
@@ -188,7 +221,7 @@
     <main>
       <section class="firstSection">
         <div class="leftSection">
-          Hii, My name is <span class="purple">Arpit</span>
+         <div> Hii, My name is <span class="purple">Arpit</span></div>
           <div>And I am a passionate</div>
           <div>Web Developer</div>
           <span id="element"></span>
