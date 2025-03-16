@@ -149,6 +149,48 @@
         width: 200px;
         font-size: 20px;
       }
+      footer {
+        background-color: #130d2727;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .contact-form {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .contact-form h2 {
+        margin-bottom: 20px;
+      }
+
+      .contact-form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .contact-form button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .contact-form button:hover {
+        background-color: #218838;
+      }
       @media screen and (max-width: 1400px) {
         body {
           min-width: fit-content;
@@ -197,6 +239,12 @@
         }
         .image-top {
           top: 100px;
+        }
+        footer {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
         }
       }
     </style>
@@ -276,6 +324,23 @@
           </div>
         </div>
       </section>
+      <footer>
+        <div class="contact-form">
+          <h2>Contact Me</h2>
+          <form id="contactForm" action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </footer>
     </main>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
