@@ -242,10 +242,10 @@
           top: 100px;
         }
         footer {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            margin-top: auto;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          margin-top: auto;
         }
       }
     </style>
@@ -258,10 +258,19 @@
         <div class="right">
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="http://127.0.0.1:3000/index2.html">About</a></li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/arpit-vishwakarma-138973283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                >About</a
+              >
+            </li>
             <li><a href="/">Sevices</a></li>
-            <li><a href="/">Projects</a></li>
-            <li><a href="/">Contact Me</a></li>
+            <li>
+              <a href="https://arpit-first-ui-challenge.vercel.app/"
+                >Projects</a
+              >
+            </li>
+            <li><a href="#footer" class="contact-form">Contact Me</a></li>
           </ul>
         </div>
       </nav>
@@ -325,7 +334,7 @@
           </div>
         </div>
       </section>
-      <footer>
+      <footer id="footer">
         <div class="contact-form">
           <h2>Contact Me</h2>
           <form id="contactForm" action="submit_form.php" method="POST">
@@ -352,6 +361,20 @@
         typeSpeed: 50,
       });
       l;
+      document.querySelectorAll(".scroll-link").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          // Scroll to the target element
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+      
     </script>
   </body>
 </html>
